@@ -1,15 +1,3 @@
-// Gramática:
-//     G = ({C, E, P, N, A, B}, {i, e, w, x, (, ), >, =, -, 3, 4, 5, 6, 7, 8}, P, C )
-//     P = {C → i ( E ) N e N
-//          C → w ( P > 3) N x = x - 3
-//          E → N > 1
-//          P → x = A | x = B
-//          N → A + B | B – A | A - B
-//          A → 3 | 4 | 5
-//          B → 6 | 7 | 8 }
-// Exemplos de cadeias produzidas por essa gramática:
-// i(7-4>1)4+6e6-3 ou w(x=6>3)3+6x=x-3
-
 #include <stdio.h>
 #include <string.h>
 
