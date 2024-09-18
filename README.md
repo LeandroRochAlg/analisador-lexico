@@ -204,3 +204,62 @@ Cadeia não reconhecida
 - `vcv.c`: código-fonte do programa que verifica cadeias no formato VCV.
 
 ---
+
+## Analisador Léxico com FLEX para as Linguagens A, B e C
+
+Este projeto implementa um analisador léxico para três linguagens distintas (A, B e C) usando a ferramenta **FLEX**. O arquivo `AnaLex.flex` contém todas as regras lexicais necessárias para identificar cadeias válidas nas linguagens especificadas.
+
+### Linguagens
+
+1. **Linguagem A**: Reconhece expressões aritméticas complexas envolvendo números de 3 a 8, operadores `+` e `-`, e condições como `>` e `=`.
+
+2. **Linguagem B**: Trata cadeias de números binários, que podem conter `0` e `1`, e termina sempre com `1`.
+
+3. **Linguagem C**: Processa cadeias com o padrão vogal-consoante-vogal, onde a vogal pode ser qualquer uma das letras `a, e, i, o, u` (maiúsculas ou minúsculas) e a consoante é qualquer outra letra do alfabeto.
+
+### Estrutura
+
+- **Flex Rules (Regras do FLEX)**: Cada regra da linguagem é definida no arquivo `.flex`, usando expressões regulares para identificar padrões válidos.
+- **Funções Auxiliares**:
+    - `reconhecida()`: Imprime "Cadeia reconhecida" quando uma cadeia é aceita.
+    - `nao_reconhecida()`: Imprime "Cadeia não reconhecida" quando uma cadeia é rejeitada.
+
+### Como Utilizar
+
+1. **Instale o Flex**:
+   ```bash
+   sudo apt-get install flex
+   ```
+
+2. **Compile o analisador**:
+   ```bash
+   flex AnaLex.flex
+   gcc lex.yy.c -o AnaLex -lfl
+   ```
+
+3. **Execute o analisador** com a cadeia de entrada desejada:
+   ```bash
+   ./AnaLex "sua_cadeia_de_teste"
+   ```
+
+    - **Exemplo 1**: Para uma cadeia válida na Linguagem A:
+      ```bash
+      ./AnaLex "i(3+6>1)"
+      # Saída: Cadeia reconhecida
+      ```
+
+    - **Exemplo 2**: Para uma cadeia válida na Linguagem B:
+      ```bash
+      ./AnaLex "1010"
+      # Saída: Cadeia reconhecida
+      ```
+
+    - **Exemplo 3**: Para uma cadeia válida na Linguagem C:
+      ```bash
+      ./AnaLex "aCa"
+      # Saída: Cadeia reconhecida
+      ```
+
+### Arquivo `AnaLex.flex`
+
+O arquivo `AnaLex.flex` contém todas as definições de expressões regulares e a lógica de análise para as linguagens A, B e C.
