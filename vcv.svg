@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="509" height="64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="32.5" cy="32.5" rx="30" ry="30"/>
+	<text x="27.5" y="38.5" font-family="Times New Roman" font-size="20">1</text>
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="183.5" cy="32.5" rx="30" ry="30"/>
+	<text x="178.5" y="38.5" font-family="Times New Roman" font-size="20">2</text>
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="329.5" cy="32.5" rx="30" ry="30"/>
+	<text x="324.5" y="38.5" font-family="Times New Roman" font-size="20">3</text>
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="477.5" cy="32.5" rx="30" ry="30"/>
+	<text x="472.5" y="38.5" font-family="Times New Roman" font-size="20">4</text>
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="477.5" cy="32.5" rx="24" ry="24"/>
+	<polygon stroke="black" stroke-width="1" points="62.5,32.5 153.5,32.5"/>
+	<polygon fill="black" stroke-width="1" points="153.5,32.5 145.5,27.5 145.5,37.5"/>
+	<text x="85.5" y="53.5" font-family="Times New Roman" font-size="20">vogal</text>
+	<polygon stroke="black" stroke-width="1" points="213.5,32.5 299.5,32.5"/>
+	<polygon fill="black" stroke-width="1" points="299.5,32.5 291.5,27.5 291.5,37.5"/>
+	<text x="216.5" y="53.5" font-family="Times New Roman" font-size="20">consoante</text>
+	<polygon stroke="black" stroke-width="1" points="359.5,32.5 447.5,32.5"/>
+	<polygon fill="black" stroke-width="1" points="447.5,32.5 439.5,27.5 439.5,37.5"/>
+	<text x="381.5" y="53.5" font-family="Times New Roman" font-size="20">vogal</text>
+</svg>

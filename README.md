@@ -131,3 +131,76 @@ Cadeia reconhecida
 
 - `multiplos.c`: código-fonte do programa que verifica múltiplos de 6.
 - `multiplos.svg`: diagrama do autômato que representa as transições para identificar múltiplos de 6.
+
+---
+
+## Vogal-Consoante-Vogal
+
+Este analisador léxico verifica se uma cadeia de três letras segue o padrão **VCV** (vogal, consoante, vogal), utilizando um autômato finito para processar a cadeia.
+
+### Regras:
+
+- A cadeia de entrada deve ter 3 caracteres.
+- O primeiro e o terceiro caracteres devem ser vogais (a, e, i, o, u, maiúsculas ou minúsculas).
+- O segundo caractere deve ser uma consoante (qualquer letra que não seja vogal, maiúscula ou minúscula).
+
+### Autômato Finito
+
+![vcv.svg](vcv.svg)
+
+Esse diagrama mostra as transições de estado que ocorrem conforme os caracteres da cadeia são processados.
+
+### Instruções de Uso
+
+1. Compile o código:
+   ```bash
+   gcc vcv.c -o vcv
+   ```
+
+2. Execute o programa passando uma cadeia de três letras como argumento:
+   ```bash
+   ./vcv "aba"
+   ```
+
+3. O programa exibirá uma das seguintes mensagens:
+    - `Cadeia reconhecida`: se a cadeia seguir o formato VCV.
+    - `Cadeia não reconhecida`: se a cadeia não seguir o formato VCV.
+
+### Estrutura do Código
+
+O código define um autômato finito com 4 estados, conforme descrito abaixo:
+
+- **Estado 1**: Estado inicial, espera uma vogal.
+- **Estado 2**: Espera uma consoante.
+- **Estado 3**: Espera uma vogal.
+- **Estado 4**: Estado final (cadeia válida).
+
+Cada estado é verificado dentro de um loop que percorre os caracteres da cadeia de entrada.
+
+### Exemplo de Execução
+
+Entrada:
+```bash
+./vcv "aba"
+```
+
+Saída:
+```
+Cadeia reconhecida
+```
+
+Entrada:
+```bash
+./vcv "abc"
+```
+
+Saída:
+```
+Cadeia não reconhecida
+```
+
+### Arquivos
+
+- `vcv.c`: código-fonte do programa que verifica cadeias no formato VCV.
+
+---
